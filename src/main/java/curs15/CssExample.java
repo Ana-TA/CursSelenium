@@ -34,9 +34,13 @@ public class CssExample extends BaseTest {
 		WebElement book1 = driver.findElement(By.cssSelector("a[href*='deep']"));
 		System.out.println(book1.getText());
 		
-		//^StartsWith
+		//^ -->StartsWith
 		WebElement book2 = driver.findElement(By.cssSelector("a[href^='life']"));
 		System.out.println(book2.getText());
+		
+		//& -->EndsWith 
+		WebElement book3 = driver.findElement(By.cssSelector("a[href$='story']"));
+		System.out.println(book3.getText());
 	}
 
 }
