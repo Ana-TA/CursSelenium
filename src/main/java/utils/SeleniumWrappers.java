@@ -1,6 +1,7 @@
 package utils;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,10 +24,19 @@ public class SeleniumWrappers extends BaseTest{
 		return driver.findElement(locator);
 	}
 	
+	public List<WebElement> returnWebElements(By locator) {
+		waitForElementToBeVisible(locator);
+		return driver.findElements(locator);
+	}
+	
 	public void waitForElementToBeVisible(By locator) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+	}
+	
+	public void sendKeys(By locator, String subject) {
+		driver.findElement(locator).sendKeys(subject);
 	}
 
 }

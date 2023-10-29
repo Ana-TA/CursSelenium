@@ -17,4 +17,5 @@ public class MenuPage {
 	public void navigateTo(By locator) {
 		driver.findElement(locator).click();
 	}
+	
 }
