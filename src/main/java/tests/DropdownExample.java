@@ -18,19 +18,17 @@ public class DropdownExample extends BaseTest{
 		app.click(app.menu.shopLink);
 		app.shopPage.filterByValue("date");
 		assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/shop/?orderby=date");
-		//Actions action = new Actions(driver);
-		//action.scrollByAmount(0,10);
-		//assertEquals(app.shopPage.getCurrentSelectedOption(), "Sort by latest");
+		assertEquals(app.shopPage.getCurrentSelectedOption(), "Sort by latest");
 	}
 	
 	@Test(priority=2)
 	public void selectByTextTest() {
 		
 		app.click(app.menu.shopLink);
-		Actions action = new Actions(driver);
-		action.scrollByAmount(0,10);
+		//Actions action = new Actions(driver);
+		//action.scrollByAmount(0,10);
 		app.shopPage.filterByVisibleText("Sort by average rating");
-		//assertEquals(app.shopPage.getCurrentSelectedOption(), "Sort by average rating");
+		assertEquals(app.shopPage.getCurrentSelectedOption(), "Sort by average rating");
 	}
 	
 	@Test(priority=3)
@@ -38,7 +36,7 @@ public class DropdownExample extends BaseTest{
 		
 		app.click(app.menu.shopLink);
 		app.shopPage.filterByIndex(4);
-		//assertEquals(app.shopPage.getCurrentSelectedOption(), "Sort by price: low to high");
+		assertEquals(app.shopPage.getCurrentSelectedOption(), "Sort by price: low to high");
 	}
 	
 	@Test(priority=4)

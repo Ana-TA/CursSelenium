@@ -2,6 +2,7 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 
+import pages.ContactPage;
 import pages.LoginPage;
 import pages.MenuPage;
 import pages.ReviewsPage;
@@ -19,4 +20,5 @@ public class BasePage extends SeleniumWrappers{
 	public ReviewsPage reviews = new ReviewsPage(driver);
 	public SingleAuthorPage singleAuthor = new SingleAuthorPage(driver);
 	public ShopPage shopPage = new ShopPage(driver);
+	public ContactPage contactPage = new ContactPage(driver);
 }
