@@ -3,14 +3,20 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+import utils.SeleniumWrappers;
+
+public class LoginPage extends SeleniumWrappers{
 	
-	public WebDriver driver;
+	//public WebDriver driver;
+	
+	//public LoginPage(WebDriver driver) {
+		//this.driver = driver;
+	//}
 	
 	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
-	
+
 	//locatori sau webelemente
 	public By usernameField = By.id("log");
 	public By passwordField = By.id("password");

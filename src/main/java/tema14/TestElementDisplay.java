@@ -3,6 +3,7 @@ package tema14;
 import org.testng.annotations.Test;
 import utils.BaseTest;
 
+import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.By;
@@ -15,7 +16,16 @@ public class TestElementDisplay extends BaseTest{
 		WebElement loginLink = driver.findElement(By.linkText("Login"));
 		assertTrue(loginLink.isDisplayed());
 		
+		WebElement user = driver.findElement(By.id("log"));	
+		WebElement pass = driver.findElement(By.id("password"));
+		
+		assertFalse(user.isDisplayed());
+		assertFalse(pass.isDisplayed());
+		
 		loginLink.click();
+		
+		assertTrue(user.isDisplayed());
+		assertTrue(pass.isDisplayed());
 	}
 	
 	@Test(priority =2)
