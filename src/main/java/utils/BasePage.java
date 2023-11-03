@@ -2,9 +2,11 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 
+import pages.BookPage;
 import pages.ContactPage;
 import pages.EventsPage;
 import pages.GenericEventPage;
+import pages.HeaderBar;
 import pages.LoginPage;
 import pages.MenuPage;
 import pages.ReviewsPage;
@@ -27,4 +29,6 @@ public class BasePage extends SeleniumWrappers{
 	public ShippingAddressPage shippingAddress = new ShippingAddressPage(driver);
 	public EventsPage events = new EventsPage(driver); 
 	public GenericEventPage genericEvent = new GenericEventPage(driver);
+	public BookPage book = new BookPage(driver);
+	public HeaderBar headerBar = new HeaderBar(driver);
 }
