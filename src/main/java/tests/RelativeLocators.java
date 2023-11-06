@@ -34,6 +34,22 @@ public class RelativeLocators extends BaseTest{
 				.toRightOf(By.xpath("//a[@href= 'life-in-the-garden']")));
 		
 		jse.executeScript("arguments[0].setAttribute('style', 'border:4px solid red')", price2 );
+		
+		//below
+		WebElement price3 = driver.findElement(RelativeLocator.with(By.xpath("//h5[contains(@class, 'sc_title')]"))
+				.below(By.xpath("//a[@href= 'life-in-the-garden']")));
+		
+		jse.executeScript("arguments[0].setAttribute('style', 'border:4px solid red')", price3 );
+		
+		//above
+		WebElement authorMann = driver.findElement(RelativeLocator.with(By.xpath("//p[text()='Richard Mann']")).above(By.xpath("//h5[contains(@class, 'sc_title')]")));
+		jse.executeScript("arguments[0].setAttribute('style', 'border:4px solid red')", authorMann);
+		
+		
+		//near
+		WebElement authorMann2 = driver.findElement(RelativeLocator.with(By
+				.xpath("//p[text()='Richard Mann']")).near(By.xpath("//a[@href= 'life-in-the-garden']"), 100));
+		jse.executeScript("arguments[0].setAttribute('style', 'border:4px solid red')", authorMann2);
 	}
 
 }
