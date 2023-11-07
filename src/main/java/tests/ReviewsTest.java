@@ -18,9 +18,7 @@ public class ReviewsTest extends BaseTest {
 		driver.switchTo().alert().accept();
 
 		app.returnWebElement(app.reviews.threeStartsRating).click();
-		app.sendKeys(app.reviews.reviewComment, "My neww comment...");
-		app.sendKeys(app.reviews.nameField, "My neww name ...");
-		app.sendKeys(app.reviews.emailField, "test@test.com");
+		app.reviews.writeDetails("My neww comment...", "My neww name ...", "test@test.com");
 		app.click(app.reviews.submitButton);
 		
 		assertTrue(app.returnWebElement(app.reviews.waitingApprovalText).isDisplayed());

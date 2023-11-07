@@ -4,14 +4,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import utils.BasePage;
+import utils.SeleniumWrappers;
 
-public class ReviewsPage {
+public class ReviewsPage extends SeleniumWrappers {
 	
-	public WebDriver driver;
-
 	public ReviewsPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 	}
+
+	public WebDriver driver;
 	
 	public By stormBookLink = By.cssSelector("a[href='storm']");
 	public By reviewsLink = By.cssSelector("a[href='#tab-reviews']");
@@ -21,4 +22,10 @@ public class ReviewsPage {
 	public By nameField = By.cssSelector("input[id='author']");
 	public By emailField = By.cssSelector("input[id='email']");
 	public By waitingApprovalText = By.cssSelector("[class='woocommerce-review__awaiting-approval']");
+	
+	public void writeDetails(String comment, String name, String email) {
+		sendKeys(reviewComment, comment);
+		sendKeys(app.reviews.nameField, name);
+		sendKeys(app.reviews.emailField, email);
+	}
 }
