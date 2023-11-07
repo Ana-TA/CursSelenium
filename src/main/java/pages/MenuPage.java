@@ -15,6 +15,8 @@ public class MenuPage {
 	public By contactsLink = By.linkText("CONTACTS");
 	public By shopLink = By.linkText("BOOKS");
 	public By eventsLink = By.linkText("EVENTS");
+	public By blogLink = By.linkText("BLOG");
+	public By blogClassic = By.xpath("//li[@id='menu-item-114']//a[@href='https://keybooks.ro/category/classic/' and text()='Classic']");
 	
 	public void navigateTo(By locator) {
 		driver.findElement(locator).click();
