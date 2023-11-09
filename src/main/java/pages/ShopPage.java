@@ -22,6 +22,9 @@ public class ShopPage extends SeleniumWrappers{
 	public By cookBooksLink = By.xpath("//a[@href='https://keybooks.ro/product-category/cookbooks/' and text()='Cookbooks']");
 	public By deletedPrice = By.xpath("//del[@aria-hidden='true']//span[@class='woocommerce-Price-currencySymbol' and text()='$']");
 	
+	public By sliderInitialPosition = By.cssSelector("span[style='left: 0%;']");
+	public By sliderFinalPosition = By.cssSelector("span[style='left: 100%;']");
+	
 	public int numberOfBooksListed = 5;
 	
 	public void filterByValue(String value) {
