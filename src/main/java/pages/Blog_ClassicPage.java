@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 
 import utils.SeleniumWrappers;
 
-public class BlogPage extends SeleniumWrappers{
+public class Blog_ClassicPage extends SeleniumWrappers{
 
-	public BlogPage(WebDriver driver) {
+	public Blog_ClassicPage(WebDriver driver) {
 		super(driver);
 	}
 	

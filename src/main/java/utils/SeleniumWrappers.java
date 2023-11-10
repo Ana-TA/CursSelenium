@@ -64,5 +64,10 @@ public class SeleniumWrappers extends BaseTest{
 	public void sendKeys(By locator, String subject) {
 		driver.findElement(locator).sendKeys(subject);
 	}
+	
+	public void backToPage(List<String> tabsList, int index) {
+		driver.switchTo().window(tabsList.get(index));
+		tabsList.clear();
+	}
 
 }

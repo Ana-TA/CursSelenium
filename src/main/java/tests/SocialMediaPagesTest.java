@@ -24,9 +24,8 @@ public class SocialMediaPagesTest extends BaseTest{
 		assertEquals(driver.getCurrentUrl(), "https://www.facebook.com/keytraining.ro");
 		driver.close();
 
-		//back to main page
-		driver.switchTo().window(browserTabs.get(0));
-		browserTabs.clear();
+		//back to Main Page
+		app.backToPage(browserTabs, 0);
 		
 		app.click(app.headerBar.twitterLink);
 		browserTabs = new ArrayList<>(driver.getWindowHandles());
@@ -35,9 +34,8 @@ public class SocialMediaPagesTest extends BaseTest{
 		assertEquals(driver.getCurrentUrl(), "https://twitter.com/");
 		driver.close();
 		
-		//back to main page
-		driver.switchTo().window(browserTabs.get(0));
-		browserTabs.clear();
+		//back to Main Page
+		app.backToPage(browserTabs, 0);
 		
 		app.click(app.headerBar.instaLink);
 		browserTabs = new ArrayList<>(driver.getWindowHandles());
@@ -46,9 +44,8 @@ public class SocialMediaPagesTest extends BaseTest{
 		assertEquals(driver.getCurrentUrl(), "https://www.instagram.com/");
 		driver.close();
 		
-		//back to main page
-		driver.switchTo().window(browserTabs.get(0));
-		browserTabs.clear();
+		//back to Main Page
+		app.backToPage(browserTabs, 0);
 		
 		browserTabs = new ArrayList<>(driver.getWindowHandles());
 		assertEquals(driver.getCurrentUrl(), "https://keybooks.ro/");

@@ -15,8 +15,11 @@ public class MenuPage {
 	public By contactsLink = By.linkText("CONTACTS");
 	public By shopLink = By.linkText("BOOKS");
 	public By eventsLink = By.linkText("EVENTS");
+	
 	public By blogLink = By.linkText("BLOG");
 	public By blogClassic = By.xpath("//li[@id='menu-item-114']//a[@href='https://keybooks.ro/category/classic/' and text()='Classic']");
+	public By blogPostFormatsLink = By.xpath("(//a[@href='https://keybooks.ro/category/post-formats/' and text()='Post Formats'])[1]");
+	
 	public By aboutLink = By.linkText("ABOUT");
 	public By signUpButton = By.cssSelector("input[value='Sign up']");
 	

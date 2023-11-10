@@ -2,7 +2,8 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 
-import pages.BlogPage;
+import pages.Blog_ClassicPage;
+import pages.Blog_PostFormatsPage;
 import pages.BookPage;
 import pages.ContactPage;
 import pages.EventsPage;
@@ -32,5 +33,6 @@ public class BasePage extends SeleniumWrappers{
 	public GenericEventPage genericEvent = new GenericEventPage(driver);
 	public BookPage book = new BookPage(driver);
 	public HeaderBar headerBar = new HeaderBar(driver);
-	public BlogPage blog = new BlogPage(driver);
+	public Blog_ClassicPage blog = new Blog_ClassicPage(driver);
+	public Blog_PostFormatsPage blogPostFormats = new Blog_PostFormatsPage(driver);
 }

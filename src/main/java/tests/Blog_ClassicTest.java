@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import utils.BaseTest;
 
-public class BlogTest extends BaseTest{
+public class Blog_ClassicTest extends BaseTest{
 	
 	@Test
 	public void blogTest() {
