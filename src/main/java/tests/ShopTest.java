@@ -1,6 +1,6 @@
 package tests;
 
-import static org.testng.Assert.assertNotEquals;
+import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
@@ -15,7 +15,7 @@ public class ShopTest extends BaseTest {
 		app.click(app.shopPage.cookBooksLink);
 		
 		System.out.println("Number of Books listed on sale: " + app.shopPage.numberOfBooksOnSale());
-		assertNotEquals(app.shopPage.numberOfBooksOnSale(), app.shopPage.numberOfBooksListed);
+		assertEquals(app.shopPage.numberOfBooksOnSale(), app.shopPage.numberOfBooksListed);
 	}
 
 }
