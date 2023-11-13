@@ -18,7 +18,7 @@ public class RelativeLocators extends BaseTest{
 	 *  near ->se duce si pe diagonala
 	 */
 	
-	@Test
+	@Test(groups = "ProductFunctionality")
 	public void relativeLocators() {
 		
 		JavascriptExecutor jse = (JavascriptExecutor)driver;

@@ -58,7 +58,7 @@ public class SeleniumWrappers extends BaseTest{
 	public void waitForElementToBeVisible(By locator) {
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
 	
 	public void sendKeys(By locator, String subject) {

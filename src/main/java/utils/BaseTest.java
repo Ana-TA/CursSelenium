@@ -11,7 +11,7 @@ public class BaseTest {
 	public WebDriver driver;
 	public BasePage app;
 	
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup() {
 		
 		driver = new ChromeDriver();
@@ -22,7 +22,7 @@ public class BaseTest {
 		app = new BasePage(driver);
 	}
 	
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void tearDown() throws InterruptedException {
 		Thread.sleep(4000);
 		//driver.close(); // inchide tab ul curent
