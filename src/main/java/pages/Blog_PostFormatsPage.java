@@ -15,4 +15,6 @@ public class Blog_PostFormatsPage extends SeleniumWrappers {
 	public By playButton = By.xpath("//div[@class='mejs-button mejs-playpause-button mejs-play']");
 	public By playSlider = By.xpath("//span[@class='mejs-time-current']");
 	public By volumeSlider = By.xpath("//a[@class='mejs-horizontal-volume-slider']");
+	public By galleryFormatTitle = By.xpath("//a[@href='https://keybooks.ro/2016/02/01/gallery-format/' and text()='Gallery Format']");	
+	public By addCommentTitle = By.xpath("//h2[@class='section_title comments_form_title']");
 }
