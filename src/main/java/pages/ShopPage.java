@@ -1,7 +1,5 @@
 package pages;
 
-import static org.testng.Assert.assertEquals;
-
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -24,6 +22,10 @@ public class ShopPage extends SeleniumWrappers{
 	
 	public By sliderInitialPosition = By.cssSelector("span[style='left: 0%;']");
 	public By sliderFinalPosition = By.cssSelector("span[style='left: 100%;']");
+	
+	public By romansLink = By.xpath("//a[@href='https://keybooks.ro/product-category/romans/' and text()='Romans']");
+	
+	public String bookListedPartialLinkLocator = "//a[@href='https://keybooks.ro/shop";
 	
 	public int numberOfBooksListed = 5;
 	

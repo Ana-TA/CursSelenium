@@ -21,5 +21,6 @@ public class BookPage extends SeleniumWrappers {
 	public By addToCartButton = By.xpath("//button[@type='submit' and text()='Add to cart']");
 	public By category = By.xpath("//span[@class='posted_in']/a[text()='Cookbooks']");
 	public By title = By.xpath("//div[@class='summary entry-summary']/h1[@class='product_title entry-title']");
+	public By romansCategory = By.xpath("//a[@href='https://keybooks.ro/product-category/romans/' and @rel='tag' and text()='Romans']");
 
 }
